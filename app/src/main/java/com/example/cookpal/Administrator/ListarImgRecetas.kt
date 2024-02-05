@@ -64,6 +64,7 @@ class ListarImgRecetas : AppCompatActivity() {
                         }
 
                     }
+
                     adaptadorRecetasAdmin=AdaptadorRecetasAdmin(this@ListarImgRecetas,recetasArrayList)
                     binding.RvRecetasAdmin.adapter= adaptadorRecetasAdmin
                 }

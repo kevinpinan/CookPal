@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Administrator.ActualizarReceta">
+
+    <RelativeLayout
+        android:id="@+id/toolbarActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height">
+
+        <ImageButton
+            android:id="@+id/Ib_volver"
+            android:src="@drawable/ic_volver"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/txt_actualizarReceta"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:background="#cccccc"
+            android:layout_alignParentBottom="true"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ImgViewActualizar"
+        android:layout_width="60dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/toolbarActualizar"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/actual"
+        android:layout_height="60dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/ImgViewActualizar"
+        android:layout_height="wrap_content">
+
+
+        <!--titulo receta-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/Et_titulo_receta"
+                android:hint="@string/Et_titulo_receta"
+                android:drawableStart="@drawable/ic_adjuntarimg"
+                android:drawablePadding="10dp"
+
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--descripcion-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/Et_descripcion_receta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_recet"
+                android:drawablePadding="10dp"
+                android:hint="@string/Et_descripcion_receta"
+                android:inputType="textPersonName|textCapWords|textMultiLine"
+                android:gravity="top|start"
+                android:padding="10dp"
+                android:lines="5"
+                android:minLines="1"
+                android:maxLines="10"  />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--seleccion de cagegoria-->
+        <TextView
+            android:id="@+id/TView_categoria_receta"
+            app:drawableStartCompat="@drawable/icon_category"
+            android:drawablePadding="10dp"
+            android:hint="@string/TView_categoria_receta"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/forma_edit_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000"
+            android:padding="10dp"
+            app:drawableEndCompat="@drawable/ic_down"
+
+            android:layout_height="wrap_content"/>
+        <!--subir receta-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_actualizar_receta"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_actualizar_receta"
+            android:layout_marginTop="10dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</RelativeLayout>

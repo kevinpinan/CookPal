@@ -40,7 +40,9 @@ class DetalleReceta_cliente : AppCompatActivity() {
                     val tiempo = "${snapshot.child("tiempo").value}"
                     val url = "${snapshot.child("url").value}"
 
-                    Misfunciones.CargarCategoria(categoria, binding.TxtCategoriaDetalleRecetaCliente)
+                  //  Misfunciones.CargarCategoria(categoria, binding.TxtCategoriaDetalleRecetaCliente)
+                    // Cargar la imagen usando Glide
+                    Misfunciones.cargarImgUrl(url, binding.icRecetaItem)
                     //seteamos informacion de ingredientes
                     binding.TxtTituloDetalleRecetaCliente.text = titulo
                     binding.descricionDCliente.text = ingredientes

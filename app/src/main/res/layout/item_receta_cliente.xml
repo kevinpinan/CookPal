@@ -8,25 +8,40 @@
     android:layout_height="170dp"
     app:cardCornerRadius="5dp"
     app:cardElevation="0dp"
-    app:contentPadding="5dp">
+    app:strokeColor="#b7e1ed">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_rounded">
+
+        <!--aqui entra la imagen de firebase-->
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:id="@+id/ic_receta_item"
+            android:src="@drawable/ic_receta_item"
+            android:scaleType="centerCrop"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"/>
 
         <TextView
             android:id="@+id/txt_titulo_receta_item"
+            android:layout_marginLeft="5dp"
             android:text="@string/txt_titulo_receta_item"
-            android:textSize="18sp"
+            android:textSize="15sp"
+            android:background="#dff0f7"
             android:textStyle="bold"
             android:maxLines="1"
-            android:gravity="center"
-
-            android:layout_width="match_parent"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/ic_receta_item"
+            android:layout_width="220dp"
+            android:layout_centerVertical="true"
             android:layout_height="wrap_content"/>
 
 
-        <RelativeLayout
+       <!-- <RelativeLayout
 
             android:id="@+id/RLImg_Receta"
             android:layout_marginTop="10dp"
@@ -36,25 +51,7 @@
             android:layout_height="300dp">
 
 
-            <!--aqui entra la imagen de firebase-->
-            <androidx.appcompat.widget.AppCompatImageView
-
-                android:id="@+id/ic_receta_item"
-                android:src="@drawable/ic_receta_item"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"/>
-
-            <TextView
-                android:id="@+id/txt_categoria_receta_admin"
-                android:text="@string/txt_categoria_receta_admin"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/ic_receta_item"
-                android:maxLines="1"
-                android:layout_width="100dp"
-                android:layout_height="200dp"/>
-
-
-        </RelativeLayout>
+        </RelativeLayout>-->
 
 
     </RelativeLayout>

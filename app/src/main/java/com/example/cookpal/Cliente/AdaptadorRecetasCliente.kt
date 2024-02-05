@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cookpal.Administrator.Misfunciones
 import com.example.cookpal.Administrator.ModeloReceta
+import com.example.cookpal.databinding.ItemRecetaClienteBinding
 import com.example.cookpal.databinding.ItemRecetasAdminBinding
 
 class AdaptadorRecetasCliente : RecyclerView.Adapter<AdaptadorRecetasCliente.HolderRecetasCliente> {
 
-    private lateinit var binding: ItemRecetasAdminBinding
+    private lateinit var binding: ItemRecetaClienteBinding
 
     private var m_context: Context
     private var recetasArrayList: ArrayList<ModeloReceta>
@@ -25,14 +26,14 @@ class AdaptadorRecetasCliente : RecyclerView.Adapter<AdaptadorRecetasCliente.Hol
 
     //holder para iniciar vistas de item
     inner class HolderRecetasCliente (itemView: View) : RecyclerView.ViewHolder(itemView){
-        val Ib_opcionEditar = binding.IbOpcionEditar
+
         val txt_titulo_receta_item = binding.txtTituloRecetaItem
         val ic_receta_item= binding.icRecetaItem
-        val txt_categoria_receta_admin=binding.txtCategoriaRecetaAdmin
+        //val txt_categoria_receta_admin=binding.txtCategoriaRecetaAdmin
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderRecetasCliente {
-        binding= ItemRecetasAdminBinding.inflate(LayoutInflater.from(m_context),parent,false)
+        binding= ItemRecetaClienteBinding.inflate(LayoutInflater.from(m_context),parent,false)
         return HolderRecetasCliente(binding.root)
     }
 
@@ -50,7 +51,8 @@ class AdaptadorRecetasCliente : RecyclerView.Adapter<AdaptadorRecetasCliente.Hol
         val tiempo=modelo.tiempo
 
         holder.txt_titulo_receta_item.text = titulo
-        Misfunciones.CargarCategoria(categoriaId,holder.txt_categoria_receta_admin)
+        //Misfunciones.CargarCategoria(categoriaId,holder.txt_categoria_receta_admin)
+        Misfunciones.cargarImgUrl(imgURL, binding.icRecetaItem)
 
         holder.itemView.setOnClickListener {
             val intent = Intent(m_context , DetalleReceta_cliente::class.java)

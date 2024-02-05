@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,142 +7,151 @@
     android:background="@drawable/degradado_azul"
     tools:context=".Administrator.RegistrarAdmin">
 
-    <RelativeLayout
-        android:id="@+id/toolbarRLAdminR"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/Ib_volver"
-            android:src="@drawable/ic_volver"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:text="@string/txt_registro_admin"
-            android:id="@+id/toolbarTituloR"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <View
-            android:layout_alignParentBottom="true"
-            android:background="#cccccc"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_below="@+id/toolbarRLAdminR"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!--nombres-->
-            <com.google.android.material.textfield.TextInputLayout
+            <RelativeLayout
+                android:id="@+id/toolbarRLAdminR"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp">
+                android:layout_height="@dimen/toolbar_height">
 
-                <!--capwords
-                cuando demos un espacio la 2da palabra empezara con mayuscula-->
-                <EditText
-                    android:id="@+id/Etext_nombres_admin"
-                    android:hint="@string/Etext_nombres_admin"
-                    android:inputType="textPersonName|textCapWords"
-                    android:layout_width="match_parent"
+                <ImageButton
+                    android:id="@+id/Ib_volver"
+                    android:src="@drawable/ic_volver"
+                    android:background="@android:color/transparent"
+                    android:padding="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <!--email-->
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp">
-
-                <EditText
-                    android:id="@+id/Etext_email_admin"
-                    android:hint="@string/Etext_email_admin"
-                    android:inputType="textEmailAddress"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:text="@string/txt_registro_admin"
+                    android:id="@+id/toolbarTituloR"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <!--clave-->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:passwordToggleEnabled="true"
-                app:boxCornerRadiusBottomStart="8dp">
+                <View
+                    android:layout_alignParentBottom="true"
+                    android:background="#cccccc"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            </RelativeLayout>
 
-                <EditText
-                    android:id="@+id/Etext_password_admin"
+            <RelativeLayout
+                android:layout_below="@+id/toolbarRLAdminR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/Etext_password_admin"
-                    android:inputType="textPassword" />
+                    android:orientation="vertical">
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <!--repertir clave-->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp">
 
-                <EditText
-                    android:id="@+id/Etext_RepPassword_admin"
-                    android:hint="@string/Etext_RepPassword_admin"
-                    android:inputType="textEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        <!--capwords
+                        cuando demos un espacio la 2da palabra empezara con mayuscula-->
+                        <EditText
+                            android:id="@+id/Etext_nombres_admin"
+                            android:hint="@string/Etext_nombres_admin"
+                            android:inputType="textPersonName|textCapWords"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--email-->
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:id="@+id/Btn_RegiAdmin"
-                android:textAllCaps="true"
-                android:backgroundTint="@color/boton1"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:text="@string/Btn_RegiAdmin"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/Txt_cuenta_existente"
-                android:layout_gravity="end"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Txt_cuenta_existente"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <EditText
+                            android:id="@+id/Etext_email_admin"
+                            android:hint="@string/Etext_email_admin"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
 
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--clave-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:passwordToggleEnabled="true"
+                        app:boxCornerRadiusBottomStart="8dp">
 
-    </RelativeLayout>
+                        <EditText
+                            android:id="@+id/Etext_password_admin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Etext_password_admin"
+                            android:inputType="textPassword" />
 
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--repertir clave-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:passwordToggleEnabled="true"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp">
 
+                        <EditText
+                            android:id="@+id/Etext_RepPassword_admin"
+                            android:hint="@string/Etext_RepPassword_admin"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:id="@+id/Btn_RegiAdmin"
+                        android:textAllCaps="true"
+                        android:backgroundTint="@color/boton1"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/Btn_RegiAdmin"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/Txt_cuenta_existente"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Txt_cuenta_existente"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
+
+

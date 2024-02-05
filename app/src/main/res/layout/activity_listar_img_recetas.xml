@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Administrator.ListarImgRecetas">
 
-
-
-
     <RelativeLayout
         android:id="@+id/toolbarRLListarImg"
         android:layout_width="match_parent"
@@ -49,16 +46,17 @@
     </RelativeLayout>
 
 
-
-
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/Rv_Recetas_Admin"
-        android:layout_margin="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/toolbarRLListarImg"
-        tools:listitem="@layout/item_recetas_admin"
-        android:layout_height="match_parent"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_recetas_admin" />
 
 </RelativeLayout>

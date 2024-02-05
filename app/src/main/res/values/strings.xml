@@ -81,8 +81,9 @@
 
     <string name="descricion_D_cliente">--</string>
 
-
-
+    <!--actualizar-->
+    <string name="txt_actualizarReceta">Actualizar Receta</string>
+    <string name="btn_actualizar_receta">Actualizar</string>
 
 
 

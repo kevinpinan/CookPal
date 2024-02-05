@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
-    app:contentPadding="10dp"
-        app:cardUseCompatPadding="true"
+    app:cardUseCompatPadding="true"
     app:cardCornerRadius="10dp"
+    app:strokeColor="#b7e1ed"
     app:cardElevation="0dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:background="#dff0f7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -18,12 +20,14 @@
         <TextView
             android:id="@+id/Item_nombreCategoAdmin"
             android:text="@string/Item_nombreCategoAdmin"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <!--eliminiar de categroira-->
         <ImageButton
+            android:background="@android:color/transparent"
             android:src="@drawable/ic_eliminar_categ"
             android:id="@+id/Eliminar_categ"
             android:layout_width="40dp"
